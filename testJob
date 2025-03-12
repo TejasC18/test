@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: '', reportFiles: 'test.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            }
+        }
+    }
+}
