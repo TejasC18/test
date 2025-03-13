@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
+                echo 'Building java job'
+                bat 'javac test.java'
             }
         }
         stage('run') {
             steps {
                 echo 'Running'
-                bat 'node funfor.js'
+                bat 'java test.java'
             }
         }
     }
