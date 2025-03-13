@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('MCA93') {
+            steps {
+                echo 'This is assignment 3 made by tejas.'
+            }
+        }
+    }
+}
